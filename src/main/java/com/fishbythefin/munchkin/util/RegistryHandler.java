@@ -28,5 +28,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<AxeItem> ORCBGONE = ITEMS.register("orc_b_gone", () ->
             new AxeItem(ModItemTier.ORC, 13.0F, -3.2F, new Item.Properties().tab(MunchkinMod.TAB)));
+    public static final RegistryObject<AxeItem> KNEECAPHAMMER = ITEMS.register("kneecap_hammer", () ->
+            new AxeItem(ModItemTier.KNEECAPPINGHAMMER, 11.0F, -3.0F, new Item.Properties().tab(MunchkinMod.TAB)));
 
 }

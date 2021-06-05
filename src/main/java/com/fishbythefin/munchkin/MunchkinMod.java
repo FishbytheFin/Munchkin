@@ -1,5 +1,6 @@
 package com.fishbythefin.munchkin;
 
+import com.fishbythefin.munchkin.events.ModClientEvents;
 import com.fishbythefin.munchkin.util.RegistryHandler;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;

@@ -10,6 +10,9 @@ public enum ModItemTier implements IItemTier {
 
     ORC(3, -1, 10.0F, -1.0F, 10, () -> {
         return Ingredient.of(RegistryHandler.ORCBGONE.get());
+    }),
+    KNEECAPPINGHAMMER(0, -1, 1.0F, -1.0F, 10, () -> {
+        return Ingredient.of(RegistryHandler.KNEECAPHAMMER.get());
     });
 
     private final int harvestLevel;
