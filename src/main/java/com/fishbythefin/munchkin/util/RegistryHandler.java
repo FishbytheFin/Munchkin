@@ -1,8 +1,9 @@
 package com.fishbythefin.munchkin.util;
 
 import com.fishbythefin.munchkin.MunchkinMod;
-import com.fishbythefin.munchkin.items.ItemBase;
+import com.fishbythefin.munchkin.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,6 +22,11 @@ public class RegistryHandler {
 
     //Items
 
-    public static final RegistryObject<Item> ORCBGONE = ITEMS.register("orc_b_gone", ItemBase::new);
+
+
+    //Tools
+
+    public static final RegistryObject<AxeItem> ORCBGONE = ITEMS.register("orc_b_gone", () ->
+            new AxeItem(ModItemTier.ORC, 13.0F, -3.2F, new Item.Properties().tab(MunchkinMod.TAB)));
 
 }
