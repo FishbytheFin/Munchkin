@@ -1,6 +1,7 @@
 package com.fishbythefin.munchkin.util;
 
 import com.fishbythefin.munchkin.MunchkinMod;
+import com.fishbythefin.munchkin.items.ItemBase;
 import com.fishbythefin.munchkin.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.item.AxeItem;
@@ -22,7 +23,7 @@ public class RegistryHandler {
 
     //Items
 
-
+    public static final RegistryObject<Item> NAPALMSTAFF = ITEMS.register("napalm_staff", ItemBase::new);
 
     //Tools
 
