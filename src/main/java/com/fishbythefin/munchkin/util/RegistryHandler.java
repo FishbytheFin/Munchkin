@@ -1,9 +1,12 @@
 package com.fishbythefin.munchkin.util;
 
 import com.fishbythefin.munchkin.MunchkinMod;
+import com.fishbythefin.munchkin.armor.ModArmorMaterial;
 import com.fishbythefin.munchkin.items.ItemBase;
 import com.fishbythefin.munchkin.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -31,5 +34,10 @@ public class RegistryHandler {
             new AxeItem(ModItemTier.ORC, 13.0F, -3.2F, new Item.Properties().tab(MunchkinMod.TAB)));
     public static final RegistryObject<AxeItem> KNEECAPHAMMER = ITEMS.register("kneecap_hammer", () ->
             new AxeItem(ModItemTier.KNEECAPPINGHAMMER, 11.0F, -3.0F, new Item.Properties().tab(MunchkinMod.TAB)));
+
+    //Armor
+
+    public static final RegistryObject<ArmorItem> BUTTKICKBOOTS = ITEMS.register("buttkicking_boots", () ->
+            new ArmorItem(ModArmorMaterial.BUTTKICK, EquipmentSlotType.FEET, new Item.Properties().tab(MunchkinMod.TAB)));
 
 }

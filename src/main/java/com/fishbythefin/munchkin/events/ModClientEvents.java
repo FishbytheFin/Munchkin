@@ -39,6 +39,10 @@ public class ModClientEvents {
                 LivingEntity entity = (LivingEntity) event.getTarget();
                 entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 200, 1));
             }
+            if (player.inventory.armor.get(0).equals(RegistryHandler.BUTTKICKBOOTS.get())) {
+                LivingEntity entity = event.getEntityLiving();
+                entity.setHealth(Math.max(0.0f, Math.min(20.0f, entity.getHealth() - 2)));
+            }
         }
     }
 
