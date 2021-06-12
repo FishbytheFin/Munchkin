@@ -1,6 +1,5 @@
 package com.fishbythefin.munchkin.blocks;
 
-import com.fishbythefin.munchkin.MunchkinMod;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -8,6 +7,6 @@ import net.minecraft.item.Item;
 public class BlockItemBase extends BlockItem {
 
     public BlockItemBase(Block block) {
-        super(block, new Item.Properties().tab(MunchkinMod.TAB));
+        super(block, new Item.Properties());
     }
 }

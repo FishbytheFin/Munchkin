@@ -3,8 +3,10 @@ package com.fishbythefin.munchkin;
 import com.fishbythefin.munchkin.events.ModClientEvents;
 import com.fishbythefin.munchkin.util.RegistryHandler;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -39,6 +41,16 @@ public class MunchkinMod
     }
 
     public static final ItemGroup TAB = new ItemGroup("munchkinTab") {
+        @Override
+        public void fillItemList(NonNullList<ItemStack> items) {
+            items.add(new ItemStack(RegistryHandler.ORCBGONE.get()));
+            items.add(new ItemStack(RegistryHandler.KNEECAPHAMMER.get()));
+            items.add(new ItemStack(RegistryHandler.NAPALMSTAFF.get()));
+            items.add(new ItemStack(RegistryHandler.POINTY_HAT.get()));
+            items.add(new ItemStack(RegistryHandler.BUTTKICKBOOTS.get()));
+            items.add(new ItemStack(RegistryHandler.DUNGEON_BRICKS_BLOCK_ITEM.get()));
+            super.fillItemList(items);
+        }
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(RegistryHandler.ORCBGONE.get());

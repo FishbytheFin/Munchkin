@@ -14,9 +14,13 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    BUTTKICK(MunchkinMod.MOD_ID + ":buttkick", -1, new int[] { 0, 0, 0, 2 }, 13,
-            SoundEvents.ARMOR_EQUIP_GENERIC, 1.0F, () -> {
+    BUTTKICK(MunchkinMod.MOD_ID + ":buttkick", -1, new int[] { 2, 2, 2, 2 }, 13,
+            SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
         return Ingredient.of(Items.IRON_INGOT);
+    }),
+    POINTY(MunchkinMod.MOD_ID + ":pointy_hat", -1, new int[] { 2, 2, 2, 2 }, 13,
+            SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
+        return Ingredient.of(Items.BLUE_WOOL);
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 };
@@ -78,4 +82,5 @@ public enum ModArmorMaterial implements IArmorMaterial {
     public float getKnockbackResistance() {
         return 0;
     }
+
 }
