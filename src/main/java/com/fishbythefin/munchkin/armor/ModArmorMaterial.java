@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public enum ModArmorMaterial implements IArmorMaterial {
 
     BUTTKICK(MunchkinMod.MOD_ID + ":buttkick", -1, new int[] { 0, 0, 0, 2 }, 13,
-            SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
+            SoundEvents.ARMOR_EQUIP_GENERIC, 1.0F, () -> {
         return Ingredient.of(Items.IRON_INGOT);
     });
 

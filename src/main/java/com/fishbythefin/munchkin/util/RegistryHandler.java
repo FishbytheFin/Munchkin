@@ -2,6 +2,8 @@ package com.fishbythefin.munchkin.util;
 
 import com.fishbythefin.munchkin.MunchkinMod;
 import com.fishbythefin.munchkin.armor.ModArmorMaterial;
+import com.fishbythefin.munchkin.blocks.BlockItemBase;
+import com.fishbythefin.munchkin.blocks.DungeonBricksBlock;
 import com.fishbythefin.munchkin.items.ItemBase;
 import com.fishbythefin.munchkin.tools.ModItemTier;
 import net.minecraft.block.Block;
@@ -17,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class RegistryHandler {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MunchkinMod.MOD_ID);
-    public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,MunchkinMod.MOD_ID);
+    public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MunchkinMod.MOD_ID);
 
     public static void init(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -39,5 +41,11 @@ public class RegistryHandler {
 
     public static final RegistryObject<ArmorItem> BUTTKICKBOOTS = ITEMS.register("buttkicking_boots", () ->
             new ArmorItem(ModArmorMaterial.BUTTKICK, EquipmentSlotType.FEET, new Item.Properties().tab(MunchkinMod.TAB)));
+
+    //Blocks
+    public static final RegistryObject<Block> DUNGEON_BRICKS_BLOCK = BLOCKS.register("dungeon_bricks", DungeonBricksBlock::new);
+
+    //Block Items
+    public static final RegistryObject<Item> DUNGEON_BRICKS_BLOCK_ITEM = ITEMS.register("dungeon_bricks", () -> new BlockItemBase(DUNGEON_BRICKS_BLOCK.get()));
 
 }

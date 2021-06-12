@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "munchkin:blocks/dungeon_bricks"
+  }
+}

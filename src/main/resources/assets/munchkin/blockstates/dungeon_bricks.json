@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "munchkin:block/dungeon_bricks" }
+  }
+}
