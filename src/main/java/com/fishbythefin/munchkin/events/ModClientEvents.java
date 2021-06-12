@@ -7,6 +7,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.monster.GhastEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.IReorderingProcessor;
@@ -39,8 +40,10 @@ public class ModClientEvents {
                 LivingEntity entity = (LivingEntity) event.getTarget();
                 entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 200, 1));
             }
-            if (player.inventory.armor.get(0).equals(RegistryHandler.BUTTKICKBOOTS.get())) {
-                LivingEntity entity = event.getEntityLiving();
+
+            if (player.inventory.armor.get(0).getItem().equals(RegistryHandler.BUTTKICKBOOTS.get().getItem())) {
+
+                LivingEntity entity = (LivingEntity) event.getTarget();
                 entity.setHealth(Math.max(0.0f, Math.min(20.0f, entity.getHealth() - 2)));
             }
         }
@@ -67,7 +70,7 @@ public class ModClientEvents {
                 Vector3d vector3d = player.getViewVector(1.0F);
 
                 FireballEntity fireball = new FireballEntity(serverWorld, player, vector3d.x, vector3d.y, vector3d.z);
-                fireball.moveTo(pos.getX(), pos.getY() + 0.5D, pos.getZ());
+                fireball.moveTo(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D);
                 serverWorld.addFreshEntityWithPassengers(fireball);
 
             }
