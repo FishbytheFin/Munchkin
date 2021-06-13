@@ -6,12 +6,14 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.EffectType;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,15 +37,17 @@ public class ModClientEvents {
             LivingEntity entity = (LivingEntity) event.getTarget();
             float bonusDamage = 0.0F;
             //Helmets
-            if (player.inventory.armor.get(3).getItem().equals(RegistryHandler.POINTY_HAT.get().getItem())) {
+            if (player.inventory.armor.get(3).getItem().equals(RegistryHandler.POINTY_HAT.get())) {
                 bonusDamage += 1.0F;
+            } else if (player.inventory.armor.get(3).getItem().equals(RegistryHandler.COURAGE_HELM.get().getItem())) {
+                bonusDamage += 3.0F;
             }
             //Chestplates
 
             //Leggings
 
             //Boots
-            if (player.inventory.armor.get(0).getItem().equals(RegistryHandler.BUTTKICKBOOTS.get().getItem())) {
+            if (player.inventory.armor.get(0).getItem().equals(RegistryHandler.BUTTKICKBOOTS.get())) {
                 bonusDamage += 2.0F;
             }
 
@@ -79,6 +83,15 @@ public class ModClientEvents {
 
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+       PlayerEntity player = event.player;
+
+       if (player.inventory.armor.get(3).getItem().equals(RegistryHandler.COURAGE_HELM.get())) {
+           player.addEffect(new EffectInstance(Effects.BLINDNESS, 20, 0));
+       }
     }
 
 }

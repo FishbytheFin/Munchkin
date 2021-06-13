@@ -1,9 +1,7 @@
 package com.fishbythefin.munchkin;
 
-import com.fishbythefin.munchkin.events.ModClientEvents;
 import com.fishbythefin.munchkin.util.RegistryHandler;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -47,6 +45,7 @@ public class MunchkinMod
             items.add(new ItemStack(RegistryHandler.KNEECAPHAMMER.get()));
             items.add(new ItemStack(RegistryHandler.NAPALMSTAFF.get()));
             items.add(new ItemStack(RegistryHandler.POINTY_HAT.get()));
+            items.add(new ItemStack(RegistryHandler.COURAGE_HELM.get()));
             items.add(new ItemStack(RegistryHandler.BUTTKICKBOOTS.get()));
             items.add(new ItemStack(RegistryHandler.DUNGEON_BRICKS_BLOCK_ITEM.get()));
             super.fillItemList(items);

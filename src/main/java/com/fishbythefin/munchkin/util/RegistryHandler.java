@@ -1,18 +1,16 @@
 package com.fishbythefin.munchkin.util;
 
 import com.fishbythefin.munchkin.MunchkinMod;
+import com.fishbythefin.munchkin.armor.CourageHelmItem;
 import com.fishbythefin.munchkin.armor.ModArmorMaterial;
 import com.fishbythefin.munchkin.armor.PointyHatItem;
 import com.fishbythefin.munchkin.blocks.BlockItemBase;
 import com.fishbythefin.munchkin.blocks.DungeonBricksBlock;
-import com.fishbythefin.munchkin.items.ItemBase;
 import com.fishbythefin.munchkin.items.NapalmStaffBase;
 import com.fishbythefin.munchkin.tools.ModItemTier;
-import cpw.mods.modlauncher.EnumerationHelper;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -45,8 +43,12 @@ public class RegistryHandler {
 
     public static final RegistryObject<ArmorItem> BUTTKICKBOOTS = ITEMS.register("buttkicking_boots", () ->
             new ArmorItem(ModArmorMaterial.BUTTKICK, EquipmentSlotType.FEET, new Item.Properties()));
+
     public static final RegistryObject<PointyHatItem> POINTY_HAT = ITEMS.register("pointy_hat", () ->
             new PointyHatItem(ModArmorMaterial.POINTY, EquipmentSlotType.HEAD, new Item.Properties()));
+
+    public static final RegistryObject<CourageHelmItem> COURAGE_HELM = ITEMS.register("courage_helm", () ->
+            new CourageHelmItem(ModArmorMaterial.COURAGE, EquipmentSlotType.HEAD, new Item.Properties()));
 
     //Blocks
     public static final RegistryObject<Block> DUNGEON_BRICKS_BLOCK = BLOCKS.register("dungeon_bricks", DungeonBricksBlock::new);

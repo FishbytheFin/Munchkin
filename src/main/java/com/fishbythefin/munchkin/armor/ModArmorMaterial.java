@@ -14,16 +14,20 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    BUTTKICK(MunchkinMod.MOD_ID + ":buttkick", -1, new int[] { 2, 2, 2, 2 }, 13,
+    BUTTKICK(MunchkinMod.MOD_ID + ":buttkick", -1, new int[]{2, 2, 2, 2}, 13,
             SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
         return Ingredient.of(Items.IRON_INGOT);
     }),
-    POINTY(MunchkinMod.MOD_ID + ":pointy_hat", -1, new int[] { 2, 2, 2, 2 }, 13,
+    POINTY(MunchkinMod.MOD_ID + ":pointy_hat", -1, new int[]{2, 2, 2, 2}, 13,
             SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
         return Ingredient.of(Items.BLUE_WOOL);
+    }),
+    COURAGE(MunchkinMod.MOD_ID + ":courage_helm", -1, new int[]{4, 4, 4, 4}, 10,
+            SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
+        return Ingredient.of(Items.IRON_INGOT);
     });
 
-    private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 };
+    private static final int[] MAX_DAMAGE_ARRAY = new int[]{11, 16, 15, 13};
     private final String name;
     private final int maxDamageFactor;
     private final int[] damageReductionAmountArray;
