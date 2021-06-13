@@ -22,8 +22,6 @@ public class PointyHatItem extends ArmorItem {
 
                 model.head.visible = armorSlot == EquipmentSlotType.HEAD;
 
-
-
                 model.young = _default.young;
                 model.riding = _default.riding;
                 model.crouching = _default.crouching;
@@ -35,5 +33,6 @@ public class PointyHatItem extends ArmorItem {
         }
         return null;
     }
+
 
 }

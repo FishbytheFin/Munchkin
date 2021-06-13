@@ -33,9 +33,23 @@ public class ModClientEvents {
                 entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 200, 1));
             }
             LivingEntity entity = (LivingEntity) event.getTarget();
-            if (player.inventory.armor.get(0).getItem().equals(RegistryHandler.BUTTKICKBOOTS.get().getItem())) {
-                entity.setHealth(Math.max(0.0f, Math.min(20.0f, entity.getHealth() - 2)));
+            float bonusDamage = 0.0F;
+            //Helmets
+            if (player.inventory.armor.get(3).getItem().equals(RegistryHandler.POINTY_HAT.get().getItem())) {
+                bonusDamage += 1.0F;
             }
+            //Chestplates
+
+            //Leggings
+
+            //Boots
+            if (player.inventory.armor.get(0).getItem().equals(RegistryHandler.BUTTKICKBOOTS.get().getItem())) {
+                bonusDamage += 2.0F;
+            }
+
+            //other
+
+            entity.setHealth(Math.max(0.0f, Math.min(20.0f, entity.getHealth() - bonusDamage)));
         }
     }
 

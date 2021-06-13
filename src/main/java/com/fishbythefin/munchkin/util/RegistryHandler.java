@@ -6,6 +6,7 @@ import com.fishbythefin.munchkin.armor.PointyHatItem;
 import com.fishbythefin.munchkin.blocks.BlockItemBase;
 import com.fishbythefin.munchkin.blocks.DungeonBricksBlock;
 import com.fishbythefin.munchkin.items.ItemBase;
+import com.fishbythefin.munchkin.items.NapalmStaffBase;
 import com.fishbythefin.munchkin.tools.ModItemTier;
 import cpw.mods.modlauncher.EnumerationHelper;
 import net.minecraft.block.Block;
@@ -31,7 +32,7 @@ public class RegistryHandler {
 
     //Items
 
-    public static final RegistryObject<Item> NAPALMSTAFF = ITEMS.register("napalm_staff", ItemBase::new);
+    public static final RegistryObject<Item> NAPALMSTAFF = ITEMS.register("napalm_staff", NapalmStaffBase::new);
 
     //Tools
 
@@ -46,9 +47,6 @@ public class RegistryHandler {
             new ArmorItem(ModArmorMaterial.BUTTKICK, EquipmentSlotType.FEET, new Item.Properties()));
     public static final RegistryObject<PointyHatItem> POINTY_HAT = ITEMS.register("pointy_hat", () ->
             new PointyHatItem(ModArmorMaterial.POINTY, EquipmentSlotType.HEAD, new Item.Properties()));
-
-
-
 
     //Blocks
     public static final RegistryObject<Block> DUNGEON_BRICKS_BLOCK = BLOCKS.register("dungeon_bricks", DungeonBricksBlock::new);
