@@ -43,6 +43,7 @@ public class MunchkinMod
         public void fillItemList(NonNullList<ItemStack> items) {
             items.add(new ItemStack(RegistryHandler.ORCBGONE.get()));
             items.add(new ItemStack(RegistryHandler.KNEECAPHAMMER.get()));
+            items.add(new ItemStack(RegistryHandler.HUGEROCK.get()));
             items.add(new ItemStack(RegistryHandler.NAPALMSTAFF.get()));
             items.add(new ItemStack(RegistryHandler.POINTY_HAT.get()));
             items.add(new ItemStack(RegistryHandler.COURAGE_HELM.get()));

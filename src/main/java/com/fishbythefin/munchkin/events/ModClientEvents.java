@@ -92,6 +92,9 @@ public class ModClientEvents {
        if (player.inventory.armor.get(3).getItem().equals(RegistryHandler.COURAGE_HELM.get())) {
            player.addEffect(new EffectInstance(Effects.BLINDNESS, 20, 0));
        }
+       if (player.getMainHandItem().getItem().equals(RegistryHandler.HUGEROCK.get()) || player.getOffhandItem().getItem().equals(RegistryHandler.HUGEROCK.get())) {
+           player.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 20, 0));
+       }
     }
 
 }

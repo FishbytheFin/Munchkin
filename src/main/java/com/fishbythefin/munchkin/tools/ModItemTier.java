@@ -3,6 +3,7 @@ package com.fishbythefin.munchkin.tools;
 import com.fishbythefin.munchkin.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
 
@@ -13,6 +14,9 @@ public enum ModItemTier implements IItemTier {
     }),
     KNEECAPPINGHAMMER(0, -1, 1.0F, -1.0F, 10, () -> {
         return Ingredient.of(RegistryHandler.KNEECAPHAMMER.get());
+    }),
+    HUGEROCK(0, -1, 1.0F, -1.0F, 10, () -> {
+        return Ingredient.of(Tags.Items.STONE);
     });
 
     private final int harvestLevel;
