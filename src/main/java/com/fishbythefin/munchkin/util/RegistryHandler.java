@@ -49,6 +49,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<CourageHelmItem> COURAGE_HELM = ITEMS.register("courage_helm", () ->
             new CourageHelmItem(ModArmorMaterial.COURAGE, EquipmentSlotType.HEAD, new Item.Properties()));
+    public static final RegistryObject<ArmorItem> STRENGTH_PANTYHOSE = ITEMS.register("strength_pantyhose", () ->
+            new ArmorItem(ModArmorMaterial.PANTYHOSE, EquipmentSlotType.LEGS, new Item.Properties()));
 
     //Blocks
     public static final RegistryObject<Block> DUNGEON_BRICKS_BLOCK = BLOCKS.register("dungeon_bricks", DungeonBricksBlock::new);

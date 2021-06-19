@@ -25,6 +25,10 @@ public enum ModArmorMaterial implements IArmorMaterial {
     COURAGE(MunchkinMod.MOD_ID + ":courage_helm", -1, new int[]{4, 4, 4, 4}, 10,
             SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
         return Ingredient.of(Items.IRON_INGOT);
+    }),
+    PANTYHOSE(MunchkinMod.MOD_ID + ":strength_pantyhose", -1, new int[]{1, 1, 1, 1}, 10,
+            SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, () -> {
+        return Ingredient.of(Items.STRING);
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{11, 16, 15, 13};

@@ -6,9 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.EffectType;
 import net.minecraft.potion.Effects;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -28,7 +26,7 @@ public class ModClientEvents {
 
     @SubscribeEvent
     public static void onMobDamage(AttackEntityEvent event) {
-        if (event.getTarget().isAlive()) {
+        if (event.getTarget() instanceof LivingEntity) {
             PlayerEntity player = event.getPlayer();
             if (player.getMainHandItem().getItem().equals(RegistryHandler.KNEECAPHAMMER.get())) {
                 LivingEntity entity = (LivingEntity) event.getTarget();
@@ -45,6 +43,9 @@ public class ModClientEvents {
             //Chestplates
 
             //Leggings
+            if (player.inventory.armor.get(1).getItem().equals(RegistryHandler.STRENGTH_PANTYHOSE.get())) {
+                bonusDamage += 1.0F;
+            }
 
             //Boots
             if (player.inventory.armor.get(0).getItem().equals(RegistryHandler.BUTTKICKBOOTS.get())) {
@@ -72,13 +73,12 @@ public class ModClientEvents {
                 }
                 napalmStaffCooldowns.put(player.getName().getString(), System.currentTimeMillis() + (3 * 1000));
                 ServerWorld serverWorld = (ServerWorld) world;
-                BlockPos pos = event.getPos();
 
 
                 Vector3d vector3d = player.getViewVector(1.0F);
 
                 FireballEntity fireball = new FireballEntity(serverWorld, player, vector3d.x, vector3d.y, vector3d.z);
-                fireball.moveTo(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D);
+                fireball.moveTo(player.getX(), player.getY() + 0.5D, player.getZ());
                 serverWorld.addFreshEntityWithPassengers(fireball);
 
             }

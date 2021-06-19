@@ -46,6 +46,7 @@ public class MunchkinMod
             items.add(new ItemStack(RegistryHandler.NAPALMSTAFF.get()));
             items.add(new ItemStack(RegistryHandler.POINTY_HAT.get()));
             items.add(new ItemStack(RegistryHandler.COURAGE_HELM.get()));
+            items.add(new ItemStack(RegistryHandler.STRENGTH_PANTYHOSE.get()));
             items.add(new ItemStack(RegistryHandler.BUTTKICKBOOTS.get()));
             items.add(new ItemStack(RegistryHandler.DUNGEON_BRICKS_BLOCK_ITEM.get()));
             super.fillItemList(items);
