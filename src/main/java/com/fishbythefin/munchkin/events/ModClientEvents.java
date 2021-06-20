@@ -106,6 +106,9 @@ public class ModClientEvents {
        if (player.getMainHandItem().getItem().equals(RegistryHandler.HUGEROCK.get()) || player.getOffhandItem().getItem().equals(RegistryHandler.HUGEROCK.get())) {
            player.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 20, 0));
        }
+       if (player.getMainHandItem().getItem().equals(RegistryHandler.PRETTYBALLOON.get()) || player.getOffhandItem().getItem().equals(RegistryHandler.PRETTYBALLOON.get())) {
+           player.addEffect(new EffectInstance(Effects.LEVITATION, 20, 0));
+       }
     }
 
 }

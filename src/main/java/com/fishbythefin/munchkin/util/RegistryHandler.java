@@ -29,6 +29,7 @@ public class RegistryHandler {
     //Items
 
     public static final RegistryObject<Item> NAPALMSTAFF = ITEMS.register("napalm_staff", NapalmStaffBase::new);
+    public static final RegistryObject<Item> PRETTYBALLOON = ITEMS.register("pretty_balloon", NapalmStaffBase::new);
 
     //Tools
 
