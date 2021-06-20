@@ -10,10 +10,7 @@ import com.fishbythefin.munchkin.items.NapalmStaffBase;
 import com.fishbythefin.munchkin.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -41,6 +38,8 @@ public class RegistryHandler {
             new AxeItem(ModItemTier.KNEECAPPINGHAMMER, 11.0F, -3.0F, new Item.Properties()));
     public static final RegistryObject<PickaxeItem> HUGEROCK = ITEMS.register("huge_rock", () ->
             new PickaxeItem(ModItemTier.HUGEROCK, 15, -3.4F, new Item.Properties()));
+    public static final RegistryObject<SwordItem> DAGGER = ITEMS.register("dagger", () ->
+            new SwordItem(ModItemTier.KNEECAPPINGHAMMER, 7, -2.2F, new Item.Properties()));
 
     //Armor
 
