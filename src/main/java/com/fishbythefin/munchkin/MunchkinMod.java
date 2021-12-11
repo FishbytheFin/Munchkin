@@ -44,6 +44,7 @@ public class MunchkinMod
             items.add(new ItemStack(RegistryHandler.ORCBGONE.get()));
             items.add(new ItemStack(RegistryHandler.KNEECAPHAMMER.get()));
             items.add(new ItemStack(RegistryHandler.HUGEROCK.get()));
+            items.add(new ItemStack((RegistryHandler.DAGGER.get())));
             items.add(new ItemStack(RegistryHandler.PRETTYBALLOON.get()));
             items.add(new ItemStack(RegistryHandler.NAPALMSTAFF.get()));
             items.add(new ItemStack(RegistryHandler.POINTY_HAT.get()));
@@ -55,7 +56,7 @@ public class MunchkinMod
         }
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(RegistryHandler.ORCBGONE.get());
+            return new ItemStack(RegistryHandler.FACE.get());
         }
     };
 

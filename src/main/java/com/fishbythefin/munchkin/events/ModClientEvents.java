@@ -57,6 +57,7 @@ public class ModClientEvents {
             //other
 
             entity.setHealth(Math.max(0.0f, Math.min(20.0f, entity.getHealth() - bonusDamage)));
+
         }
     }
 

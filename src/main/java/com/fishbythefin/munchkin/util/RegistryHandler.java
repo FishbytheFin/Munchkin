@@ -28,6 +28,7 @@ public class RegistryHandler {
 
     //Items
 
+    public static final RegistryObject<Item> FACE = ITEMS.register("face", NapalmStaffBase::new);
     public static final RegistryObject<Item> NAPALMSTAFF = ITEMS.register("napalm_staff", NapalmStaffBase::new);
     public static final RegistryObject<Item> PRETTYBALLOON = ITEMS.register("pretty_balloon", NapalmStaffBase::new);
 
@@ -40,7 +41,7 @@ public class RegistryHandler {
     public static final RegistryObject<PickaxeItem> HUGEROCK = ITEMS.register("huge_rock", () ->
             new PickaxeItem(ModItemTier.HUGEROCK, 15, -3.4F, new Item.Properties()));
     public static final RegistryObject<SwordItem> DAGGER = ITEMS.register("dagger", () ->
-            new SwordItem(ModItemTier.KNEECAPPINGHAMMER, 7, -2.2F, new Item.Properties()));
+            new SwordItem(ModItemTier.DAGGER, 7, -2.2F, new Item.Properties()));
 
     //Armor
 

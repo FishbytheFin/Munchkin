@@ -17,6 +17,10 @@ public enum ModItemTier implements IItemTier {
     }),
     HUGEROCK(0, -1, 1.0F, -1.0F, 10, () -> {
         return Ingredient.of(Tags.Items.STONE);
+    }),
+    DAGGER(0, -1, 1.0F, -1.0F, 10, () ->
+    {
+        return Ingredient.of(RegistryHandler.DAGGER.get());
     });
 
     private final int harvestLevel;
